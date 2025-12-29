@@ -6,6 +6,26 @@
 ![Docker](https://img.shields.io/badge/Docker-Ready-blue)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-Ready-blue)
 
+---
+
+## 🚀 Quick Start
+
+📁 **Main Project Directory**: [`heart-disease-mlops/`](./heart-disease-mlops)
+
+**For complete setup and deployment instructions**, navigate to the project folder:
+
+```bash
+cd heart-disease-mlops
+```
+
+**Key Documentation**:
+- 🏠 [**Local Deployment Guide**](./heart-disease-mlops/LOCAL_DEPLOYMENT_GUIDE.md) - Run locally step-by-step
+- ☁️ [**Cloud Deployment Guide**](./heart-disease-mlops/CLOUD_DEPLOYMENT_GUIDE.md) - Deploy to Azure/AWS/GCP
+- 🔗 [**Access Instructions**](./heart-disease-mlops/ACCESS_INSTRUCTIONS.md) - Test the API
+- 📋 [**Execution Guide**](./heart-disease-mlops/EXECUTION_GUIDE.md) - Detailed execution steps
+
+---
+
 ## 📋 Project Overview
 
 This project implements an end-to-end MLOps pipeline for predicting heart disease risk using the UCI Heart Disease dataset. The solution includes data preprocessing, model training with experiment tracking, containerization, CI/CD pipelines, and production deployment with monitoring.
@@ -48,13 +68,12 @@ This project implements an end-to-end MLOps pipeline for predicting heart diseas
 | ca | Number of major vessels (0-3) | Discrete |
 | thal | Thalassemia (3, 6, 7) | Categorical |
 
-## 🏗️ Project Structure
-
-**Important:** The project expects the following directory structure:
+## 🏗️ Repository Structure
 
 ```
-<parent_directory>/
-├── heart-disease-mlops/              # Main project directory (this repo)
+MLOpsExperimentalLearning_Assignment_1_Group_81/    # Repository root
+├── README.md                         # This file (main repository README)
+├── heart-disease-mlops/              # Main project directory
 │   ├── .github/
 │   │   └── workflows/
 │   │       └── ci-cd.yml            # GitHub Actions CI/CD pipeline
@@ -111,8 +130,8 @@ This project implements an end-to-end MLOps pipeline for predicting heart diseas
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/heart-disease-mlops.git
-cd heart-disease-mlops
+git clone https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81.git
+cd MLOpsExperimentalLearning_Assignment_1_Group_81/heart-disease-mlops
 ```
 
 2. **Setup dataset directory**
