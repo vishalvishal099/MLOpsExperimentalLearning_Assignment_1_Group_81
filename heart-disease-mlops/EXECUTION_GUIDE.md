@@ -521,7 +521,7 @@ Use `docs/FINAL_REPORT_TEMPLATE.md` as a starting point
 **Solution:**
 ```bash
 python src/download_data.py
-# Ensure ../raw_dataSet/heart+disease exists (relative to project directory)
+# Ensure raw_dataSet/heart+disease exists within the project directory
 ```
 
 ### Issue 2: MLflow UI not starting

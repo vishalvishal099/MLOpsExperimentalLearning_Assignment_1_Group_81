@@ -50,6 +50,7 @@ models/*.onnx
 # Data
 data/raw/
 data/processed/
+raw_dataSet/
 
 # Logs
 *.log

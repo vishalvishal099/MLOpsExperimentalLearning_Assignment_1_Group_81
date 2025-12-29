@@ -144,7 +144,7 @@ Develop a production-ready machine learning classifier to predict the risk of he
 **Download Script:** `src/download_data.py`
 
 The script performs:
-1. Copies raw data from source directory: `../raw_dataSet/heart+disease` (relative to project)
+1. Copies raw data from source directory: `raw_dataSet/heart+disease` (within project directory)
 2. Processes Cleveland dataset (`cleve.mod`)
 3. Converts target variable to binary (0=no disease, 1=disease)
 4. Saves cleaned data to `data/processed/heart_disease.csv`

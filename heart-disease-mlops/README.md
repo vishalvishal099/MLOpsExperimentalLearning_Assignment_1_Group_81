@@ -89,16 +89,14 @@ This project implements an end-to-end MLOps pipeline for predicting heart diseas
 │   ├── Dockerfile
 │   ├── requirements.txt
 │   └── README.md
-│
-└── raw_dataSet/                      # Dataset directory (place here)
-    └── heart+disease/
-        ├── processed.cleveland.data  # Main dataset file
-        ├── cleveland.data
-        └── heart-disease.names
-
+├── raw_dataSet/                      # Dataset directory (inside project)
+│   └── heart+disease/
+│       ├── processed.cleveland.data  # Main dataset file
+│       ├── cleveland.data
+│       └── heart-disease.names
 ```
 
-**Note:** Place the UCI Heart Disease dataset in `../raw_dataSet/heart+disease/` relative to the project directory. The `src/download_data.py` script will copy files from there to the project's `data/` directory.
+**Note:** The UCI Heart Disease dataset is now located in `raw_dataSet/heart+disease/` within the project directory. The `src/download_data.py` script will copy files from there to the project's `data/` directory.
 
 ## 🚀 Getting Started
 
@@ -120,8 +118,8 @@ cd heart-disease-mlops
 2. **Setup dataset directory**
 ```bash
 # Ensure dataset is placed in the correct location:
-# ../raw_dataSet/heart+disease/
-ls ../raw_dataSet/heart+disease/
+# raw_dataSet/heart+disease/ (within project directory)
+ls raw_dataSet/heart+disease/
 ```
 
 3. **Create virtual environment**

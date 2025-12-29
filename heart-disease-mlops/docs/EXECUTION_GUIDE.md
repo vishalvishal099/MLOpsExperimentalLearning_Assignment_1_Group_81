@@ -70,7 +70,7 @@ python src/download_data.py
 Heart Disease Dataset Download Script
 ================================================================================
 
-✓ Found local dataset at: ../raw_dataSet/heart+disease
+✓ Found local dataset at: raw_dataSet/heart+disease
   ✓ Copied: processed.cleveland.data
   ✓ Copied: cleveland.data
   ✓ Copied: heart-disease.names

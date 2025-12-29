@@ -21,7 +21,7 @@ def download_dataset():
     Download heart disease dataset from local source
     
     The dataset is available at:
-    - Local: ../raw_dataSet/heart+disease (relative to project root)
+    - Local: raw_dataSet/heart+disease (within project directory)
     - Web: https://archive.ics.uci.edu/dataset/45/heart+disease
     """
     
@@ -29,8 +29,8 @@ def download_dataset():
     print("Heart Disease Dataset Download Script")
     print("=" * 80)
     
-    # Source path (relative to project parent directory)
-    source_path = BASE_DIR.parent / "raw_dataSet" / "heart+disease"
+    # Source path (within project directory)
+    source_path = BASE_DIR / "raw_dataSet" / "heart+disease"
     
     if source_path.exists():
         print(f"\n✓ Found local dataset at: {source_path}")
