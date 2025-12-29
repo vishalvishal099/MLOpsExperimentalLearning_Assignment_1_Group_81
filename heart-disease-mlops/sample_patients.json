@@ -1,0 +1,362 @@
+[
+  {
+    "name": "High Risk Patient 1 - Elderly with Multiple Symptoms",
+    "data": {
+      "age": 63,
+      "ca": 3,
+      "chol": 233,
+      "cp": 3,
+      "exang": 1,
+      "fbs": 1,
+      "oldpeak": 2.3,
+      "restecg": 2,
+      "sex": 1,
+      "slope": 3,
+      "thal": 7,
+      "thalach": 150,
+      "trestbps": 145
+    }
+  },
+  {
+    "name": "High Risk Patient 2 - Severe Chest Pain",
+    "data": {
+      "age": 67,
+      "ca": 2,
+      "chol": 286,
+      "cp": 4,
+      "exang": 1,
+      "fbs": 0,
+      "oldpeak": 1.5,
+      "restecg": 2,
+      "sex": 1,
+      "slope": 2,
+      "thal": 7,
+      "thalach": 108,
+      "trestbps": 160
+    }
+  },
+  {
+    "name": "High Risk Patient 3 - High Cholesterol",
+    "data": {
+      "age": 70,
+      "ca": 3,
+      "chol": 321,
+      "cp": 3,
+      "exang": 1,
+      "fbs": 1,
+      "oldpeak": 3.5,
+      "restecg": 1,
+      "sex": 0,
+      "slope": 1,
+      "thal": 7,
+      "thalach": 102,
+      "trestbps": 174
+    }
+  },
+  {
+    "name": "Medium Risk Patient 1 - Moderate Symptoms",
+    "data": {
+      "age": 54,
+      "ca": 1,
+      "chol": 250,
+      "cp": 2,
+      "exang": 0,
+      "fbs": 0,
+      "oldpeak": 1.0,
+      "restecg": 1,
+      "sex": 1,
+      "slope": 2,
+      "thal": 6,
+      "thalach": 125,
+      "trestbps": 140
+    }
+  },
+  {
+    "name": "Medium Risk Patient 2 - Middle-aged with History",
+    "data": {
+      "age": 58,
+      "ca": 1,
+      "chol": 283,
+      "cp": 2,
+      "exang": 1,
+      "fbs": 1,
+      "oldpeak": 1.2,
+      "restecg": 0,
+      "sex": 0,
+      "slope": 2,
+      "thal": 7,
+      "thalach": 130,
+      "trestbps": 150
+    }
+  },
+  {
+    "name": "Medium Risk Patient 3 - Borderline",
+    "data": {
+      "age": 52,
+      "ca": 0,
+      "chol": 220,
+      "cp": 2,
+      "exang": 0,
+      "fbs": 0,
+      "oldpeak": 0.8,
+      "restecg": 1,
+      "sex": 1,
+      "slope": 2,
+      "thal": 6,
+      "thalach": 135,
+      "trestbps": 135
+    }
+  },
+  {
+    "name": "Low Risk Patient 1 - Young and Healthy",
+    "data": {
+      "age": 35,
+      "ca": 0,
+      "chol": 180,
+      "cp": 1,
+      "exang": 0,
+      "fbs": 0,
+      "oldpeak": 0.0,
+      "restecg": 0,
+      "sex": 1,
+      "slope": 1,
+      "thal": 3,
+      "thalach": 170,
+      "trestbps": 120
+    }
+  },
+  {
+    "name": "Low Risk Patient 2 - Active Lifestyle",
+    "data": {
+      "age": 42,
+      "ca": 0,
+      "chol": 195,
+      "cp": 1,
+      "exang": 0,
+      "fbs": 0,
+      "oldpeak": 0.0,
+      "restecg": 0,
+      "sex": 0,
+      "slope": 1,
+      "thal": 3,
+      "thalach": 162,
+      "trestbps": 118
+    }
+  },
+  {
+    "name": "Low Risk Patient 3 - Good Vitals",
+    "data": {
+      "age": 48,
+      "ca": 0,
+      "chol": 201,
+      "cp": 1,
+      "exang": 0,
+      "fbs": 0,
+      "oldpeak": 0.2,
+      "restecg": 0,
+      "sex": 1,
+      "slope": 1,
+      "thal": 3,
+      "thalach": 155,
+      "trestbps": 125
+    }
+  },
+  {
+    "name": "Very Low Risk - Athletic Young Adult",
+    "data": {
+      "age": 29,
+      "ca": 0,
+      "chol": 170,
+      "cp": 1,
+      "exang": 0,
+      "fbs": 0,
+      "oldpeak": 0.0,
+      "restecg": 0,
+      "sex": 1,
+      "slope": 1,
+      "thal": 3,
+      "thalach": 180,
+      "trestbps": 110
+    }
+  },
+  {
+    "name": "Senior - Mild Symptoms",
+    "data": {
+      "age": 65,
+      "ca": 0,
+      "chol": 240,
+      "cp": 2,
+      "exang": 0,
+      "fbs": 0,
+      "oldpeak": 0.5,
+      "restecg": 0,
+      "sex": 0,
+      "slope": 2,
+      "thal": 6,
+      "thalach": 140,
+      "trestbps": 130
+    }
+  },
+  {
+    "name": "Middle-aged Female - Regular Checkup",
+    "data": {
+      "age": 50,
+      "ca": 0,
+      "chol": 210,
+      "cp": 1,
+      "exang": 0,
+      "fbs": 0,
+      "oldpeak": 0.3,
+      "restecg": 0,
+      "sex": 0,
+      "slope": 1,
+      "thal": 3,
+      "thalach": 148,
+      "trestbps": 122
+    }
+  },
+  {
+    "name": "High Risk - Post-MI Patient",
+    "data": {
+      "age": 72,
+      "ca": 3,
+      "chol": 310,
+      "cp": 4,
+      "exang": 1,
+      "fbs": 1,
+      "oldpeak": 4.0,
+      "restecg": 2,
+      "sex": 1,
+      "slope": 1,
+      "thal": 7,
+      "thalach": 95,
+      "trestbps": 180
+    }
+  },
+  {
+    "name": "Moderate Risk - Diabetic Patient",
+    "data": {
+      "age": 60,
+      "ca": 1,
+      "chol": 267,
+      "cp": 2,
+      "exang": 0,
+      "fbs": 1,
+      "oldpeak": 1.5,
+      "restecg": 1,
+      "sex": 1,
+      "slope": 2,
+      "thal": 6,
+      "thalach": 120,
+      "trestbps": 145
+    }
+  },
+  {
+    "name": "Low Risk - Young Female",
+    "data": {
+      "age": 38,
+      "ca": 0,
+      "chol": 188,
+      "cp": 1,
+      "exang": 0,
+      "fbs": 0,
+      "oldpeak": 0.0,
+      "restecg": 0,
+      "sex": 0,
+      "slope": 1,
+      "thal": 3,
+      "thalach": 165,
+      "trestbps": 115
+    }
+  },
+  {
+    "name": "High Risk - Multiple Blockages",
+    "data": {
+      "age": 68,
+      "ca": 3,
+      "chol": 295,
+      "cp": 3,
+      "exang": 1,
+      "fbs": 1,
+      "oldpeak": 2.8,
+      "restecg": 2,
+      "sex": 1,
+      "slope": 1,
+      "thal": 7,
+      "thalach": 105,
+      "trestbps": 170
+    }
+  },
+  {
+    "name": "Moderate Risk - Hypertensive",
+    "data": {
+      "age": 55,
+      "ca": 0,
+      "chol": 255,
+      "cp": 2,
+      "exang": 0,
+      "fbs": 0,
+      "oldpeak": 1.0,
+      "restecg": 1,
+      "sex": 0,
+      "slope": 2,
+      "thal": 6,
+      "thalach": 132,
+      "trestbps": 155
+    }
+  },
+  {
+    "name": "Low Risk - Fitness Enthusiast",
+    "data": {
+      "age": 44,
+      "ca": 0,
+      "chol": 192,
+      "cp": 1,
+      "exang": 0,
+      "fbs": 0,
+      "oldpeak": 0.0,
+      "restecg": 0,
+      "sex": 1,
+      "slope": 1,
+      "thal": 3,
+      "thalach": 168,
+      "trestbps": 118
+    }
+  },
+  {
+    "name": "High Risk - Elderly with Angina",
+    "data": {
+      "age": 74,
+      "ca": 2,
+      "chol": 305,
+      "cp": 4,
+      "exang": 1,
+      "fbs": 1,
+      "oldpeak": 3.2,
+      "restecg": 2,
+      "sex": 0,
+      "slope": 1,
+      "thal": 7,
+      "thalach": 98,
+      "trestbps": 175
+    }
+  },
+  {
+    "name": "Moderate Risk - Smoker",
+    "data": {
+      "age": 51,
+      "ca": 1,
+      "chol": 245,
+      "cp": 2,
+      "exang": 0,
+      "fbs": 0,
+      "oldpeak": 1.2,
+      "restecg": 0,
+      "sex": 1,
+      "slope": 2,
+      "thal": 6,
+      "thalach": 128,
+      "trestbps": 142
+    }
+  }
+]

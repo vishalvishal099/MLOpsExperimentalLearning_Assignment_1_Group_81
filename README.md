@@ -12,6 +12,32 @@
 
 📁 **Main Project Directory**: [`heart-disease-mlops/`](./heart-disease-mlops)
 
+### 🎯 New to MLOps or Cloud Deployment?
+
+**👉 START HERE:** [`START_HERE.md`](./heart-disease-mlops/START_HERE.md) - Complete beginner-friendly guide!
+
+This guide will help you:
+- ✅ Understand what to do step-by-step
+- ✅ Choose between local vs cloud deployment
+- ✅ Navigate all available documentation
+- ✅ Complete your assignment successfully
+
+---
+
+**For complete setup and deployment instructions**, navigate to the project folder:
+
+```bash
+cd heart-disease-mlops
+```
+
+**Key Documentation**:
+- 🎯 [**START HERE**](./heart-disease-mlops/START_HERE.md) - **Begin here if you're new!** ⭐
+- 🏠 [**Local Deployment Guide**](./heart-disease-mlops/LOCAL_DEPLOYMENT_GUIDE.md) - Run locally step-by-step
+- ☁️ [**Cloud Deployment Guide**](./heart-disease-mlops/CLOUD_DEPLOYMENT_GUIDE.md) - Deploy to Azure/AWS/GCP
+- 🔗 [**Access Instructions**](./heart-disease-mlops/ACCESS_INSTRUCTIONS.md) - Test the API
+- 📋 [**Execution Guide**](./heart-disease-mlops/EXECUTION_GUIDE.md) - Detailed execution steps
+
+---
 
 ## 👥 Contributors
 
@@ -22,19 +48,6 @@
 | YASH VERMA | 2024AA05640 |
 | AVISHI GUPTA | 2024AA05055 |
 | ASIT SHUKLA  | 2023AC05956 |
-
-
-**For complete setup and deployment instructions**, navigate to the project folder:
-
-```bash
-cd heart-disease-mlops
-```
-
-**Key Documentation**:
-- 🏠 [**Local Deployment Guide**](./heart-disease-mlops/LOCAL_DEPLOYMENT_GUIDE.md) - Run locally step-by-step
-- ☁️ [**Cloud Deployment Guide**](./heart-disease-mlops/CLOUD_DEPLOYMENT_GUIDE.md) - Deploy to Azure/AWS/GCP
-- 🔗 [**Access Instructions**](./heart-disease-mlops/ACCESS_INSTRUCTIONS.md) - Test the API
-- 📋 [**Execution Guide**](./heart-disease-mlops/EXECUTION_GUIDE.md) - Detailed execution steps
 
 ---
 

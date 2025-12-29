@@ -10,9 +10,11 @@ import pandas as pd
 from pathlib import Path
 import logging
 from datetime import datetime
-from prometheus_client import Counter, Histogram, generate_latest
+from prometheus_client import Counter, Histogram, Gauge, generate_latest, REGISTRY
 from fastapi.responses import PlainTextResponse
 import time
+import psutil
+import os
 
 # Configure logging
 logging.basicConfig(
@@ -26,9 +28,34 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Prometheus metrics
+# Request counters
 REQUEST_COUNT = Counter('prediction_requests_total', 'Total prediction requests')
+HTTP_REQUESTS = Counter('http_requests_total', 'Total HTTP requests', ['method', 'endpoint', 'status'])
+
+# Latency histograms
 REQUEST_LATENCY = Histogram('prediction_latency_seconds', 'Prediction latency')
+ENDPOINT_LATENCY = Histogram('http_request_duration_seconds', 'HTTP request latency', ['method', 'endpoint'])
+
+# Prediction metrics
 PREDICTION_COUNTER = Counter('predictions_by_class', 'Predictions by class', ['prediction'])
+PREDICTION_RESULTS = Counter('prediction_results_total', 'Total predictions by result', ['result'])
+PREDICTION_RISK_LEVEL = Counter('prediction_risk_level_total', 'Predictions by risk level', ['risk_level'])
+
+# Batch prediction metrics
+BATCH_REQUEST_COUNT = Counter('batch_prediction_requests_total', 'Total batch prediction requests')
+BATCH_SIZE = Histogram('batch_prediction_size', 'Batch prediction size')
+BATCH_LATENCY = Histogram('batch_prediction_latency_seconds', 'Batch prediction latency')
+
+# System metrics
+CPU_USAGE = Gauge('api_cpu_usage_percent', 'CPU usage percentage')
+MEMORY_USAGE = Gauge('api_memory_usage_bytes', 'Memory usage in bytes')
+MEMORY_PERCENT = Gauge('api_memory_usage_percent', 'Memory usage percentage')
+
+# API health
+API_HEALTH = Gauge('api_health_status', 'API health status (1=healthy, 0=unhealthy)')
+
+# Get process for system metrics
+process = psutil.Process(os.getpid())
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -45,6 +72,38 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Middleware to track HTTP requests
+@app.middleware("http")
+async def track_requests(request, call_next):
+    """Middleware to track all HTTP requests"""
+    start_time = time.time()
+    
+    # Process request
+    response = await call_next(request)
+    
+    # Calculate latency
+    latency = time.time() - start_time
+    
+    # Get endpoint path
+    endpoint = request.url.path
+    method = request.method
+    status = response.status_code
+    
+    # Update metrics
+    HTTP_REQUESTS.labels(method=method, endpoint=endpoint, status=str(status)).inc()
+    ENDPOINT_LATENCY.labels(method=method, endpoint=endpoint).observe(latency)
+    
+    # Update system metrics
+    try:
+        CPU_USAGE.set(process.cpu_percent())
+        mem_info = process.memory_info()
+        MEMORY_USAGE.set(mem_info.rss)
+        MEMORY_PERCENT.set(process.memory_percent())
+    except:
+        pass
+    
+    return response
 
 # Load model and preprocessor
 BASE_DIR = Path(__file__).parent.parent
@@ -124,8 +183,10 @@ async def root():
 async def health_check():
     """Health check endpoint"""
     if model is None or preprocessor is None:
+        API_HEALTH.set(0)
         raise HTTPException(status_code=503, detail="Model not loaded")
     
+    API_HEALTH.set(1)
     return {
         "status": "healthy",
         "model_loaded": model is not None,
@@ -178,8 +239,10 @@ async def predict(patient_data: PatientData):
         else:
             risk_level = "High"
         
-        # Log prediction
+        # Log prediction and update metrics
         PREDICTION_COUNTER.labels(prediction=str(prediction)).inc()
+        PREDICTION_RESULTS.labels(result=str(prediction)).inc()
+        PREDICTION_RISK_LEVEL.labels(risk_level=risk_level).inc()
         logger.info(f"Prediction: {prediction}, Probability: {probability:.4f}, Risk: {risk_level}")
         
         # Record latency
@@ -202,7 +265,13 @@ async def predict(patient_data: PatientData):
 async def predict_batch(patients: list[PatientData]):
     """
     Predict heart disease risk for multiple patients
+    
+    Returns predictions for each patient in the batch
     """
+    start_time = time.time()
+    BATCH_REQUEST_COUNT.inc()
+    BATCH_SIZE.observe(len(patients))
+    
     if model is None or preprocessor is None:
         raise HTTPException(status_code=503, detail="Model not available")
     
@@ -225,14 +294,26 @@ async def predict_batch(patients: list[PatientData]):
             else:
                 risk_level = "High"
             
+            # Update metrics
+            PREDICTION_RESULTS.labels(result=str(prediction)).inc()
+            PREDICTION_RISK_LEVEL.labels(risk_level=risk_level).inc()
+            
             predictions.append({
                 "prediction": int(prediction),
                 "probability": float(probability),
                 "risk_level": risk_level
             })
         
-        logger.info(f"Batch prediction completed for {len(patients)} patients")
-        return {"predictions": predictions, "count": len(predictions)}
+        # Record batch latency
+        batch_latency = time.time() - start_time
+        BATCH_LATENCY.observe(batch_latency)
+        
+        logger.info(f"Batch prediction completed for {len(patients)} patients in {batch_latency:.3f}s")
+        return {
+            "predictions": predictions, 
+            "count": len(predictions),
+            "batch_latency": batch_latency
+        }
     
     except Exception as e:
         logger.error(f"Batch prediction error: {str(e)}")

@@ -1,0 +1,365 @@
+{
+  "dashboard": {
+    "title": "Heart Disease ML API - Enhanced Monitoring",
+    "tags": ["mlops", "heart-disease", "api"],
+    "timezone": "browser",
+    "refresh": "10s",
+    "time": {
+      "from": "now-15m",
+      "to": "now"
+    },
+    "panels": [
+      {
+        "id": 1,
+        "title": "API Health Status",
+        "type": "stat",
+        "gridPos": {"h": 4, "w": 6, "x": 0, "y": 0},
+        "targets": [{
+          "expr": "api_health_status",
+          "refId": "A",
+          "legendFormat": "Health"
+        }],
+        "options": {
+          "graphMode": "none",
+          "colorMode": "background",
+          "textMode": "value",
+          "reduceOptions": {
+            "values": false,
+            "calcs": ["lastNotNull"]
+          }
+        },
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [
+              {
+                "type": "value",
+                "options": {
+                  "1": {
+                    "text": "Healthy",
+                    "color": "green"
+                  },
+                  "0": {
+                    "text": "Unhealthy",
+                    "color": "red"
+                  }
+                }
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"value": null, "color": "red"},
+                {"value": 0.5, "color": "green"}
+              ]
+            },
+            "unit": "none"
+          }
+        }
+      },
+      {
+        "id": 2,
+        "title": "Total Predictions",
+        "type": "stat",
+        "gridPos": {"h": 4, "w": 6, "x": 6, "y": 0},
+        "targets": [{
+          "expr": "sum(prediction_requests_total)",
+          "legendFormat": "Total"
+        }],
+        "options": {
+          "graphMode": "area",
+          "colorMode": "value"
+        }
+      },
+      {
+        "id": 3,
+        "title": "CPU Usage",
+        "type": "gauge",
+        "gridPos": {"h": 4, "w": 6, "x": 12, "y": 0},
+        "targets": [{
+          "expr": "api_cpu_usage_percent",
+          "legendFormat": "CPU %"
+        }],
+        "options": {
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true
+        },
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percent",
+            "min": 0,
+            "max": 100,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"value": 0, "color": "green"},
+                {"value": 50, "color": "yellow"},
+                {"value": 80, "color": "red"}
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 4,
+        "title": "Memory Usage",
+        "type": "gauge",
+        "gridPos": {"h": 4, "w": 6, "x": 18, "y": 0},
+        "targets": [{
+          "expr": "api_memory_usage_bytes / 1024 / 1024",
+          "legendFormat": "Memory MB"
+        }],
+        "options": {
+          "showThresholdLabels": false,
+          "showThresholdMarkers": true
+        },
+        "fieldConfig": {
+          "defaults": {
+            "unit": "decmbytes",
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"value": 0, "color": "green"},
+                {"value": 500, "color": "yellow"},
+                {"value": 1000, "color": "red"}
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 5,
+        "title": "HTTP Requests by Method",
+        "type": "timeseries",
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 4},
+        "targets": [{
+          "expr": "rate(http_requests_total[1m])",
+          "legendFormat": "{{method}} {{endpoint}}"
+        }],
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "smooth",
+              "fillOpacity": 10
+            },
+            "unit": "reqps"
+          }
+        }
+      },
+      {
+        "id": 6,
+        "title": "Prediction Rate (req/min)",
+        "type": "timeseries",
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 4},
+        "targets": [{
+          "expr": "rate(prediction_requests_total[1m]) * 60",
+          "legendFormat": "{{class}}"
+        }],
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "smooth",
+              "fillOpacity": 10
+            },
+            "unit": "rpm"
+          }
+        }
+      },
+      {
+        "id": 7,
+        "title": "Average Prediction Time",
+        "type": "stat",
+        "gridPos": {"h": 4, "w": 8, "x": 0, "y": 12},
+        "targets": [{
+          "expr": "rate(prediction_latency_seconds_sum[5m]) / rate(prediction_latency_seconds_count[5m])",
+          "legendFormat": "Avg Latency"
+        }],
+        "options": {
+          "graphMode": "area",
+          "colorMode": "value"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "unit": "s",
+            "decimals": 3,
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {"value": 0, "color": "green"},
+                {"value": 0.1, "color": "yellow"},
+                {"value": 0.5, "color": "red"}
+              ]
+            }
+          }
+        }
+      },
+      {
+        "id": 8,
+        "title": "Predictions by Class",
+        "type": "piechart",
+        "gridPos": {"h": 8, "w": 8, "x": 8, "y": 12},
+        "targets": [{
+          "expr": "prediction_results_total",
+          "legendFormat": "Class {{result}}"
+        }],
+        "options": {
+          "legend": {
+            "displayMode": "table",
+            "placement": "right",
+            "values": ["value", "percent"]
+          },
+          "pieType": "pie",
+          "displayLabels": ["name", "percent"]
+        },
+        "fieldConfig": {
+          "overrides": [
+            {
+              "matcher": {"id": "byName", "options": "Class 0"},
+              "properties": [{"id": "color", "value": {"fixedColor": "green", "mode": "fixed"}}]
+            },
+            {
+              "matcher": {"id": "byName", "options": "Class 1"},
+              "properties": [{"id": "color", "value": {"fixedColor": "red", "mode": "fixed"}}]
+            }
+          ]
+        }
+      },
+      {
+        "id": 9,
+        "title": "Predictions by Risk Level",
+        "type": "piechart",
+        "gridPos": {"h": 8, "w": 8, "x": 16, "y": 12},
+        "targets": [{
+          "expr": "prediction_risk_level_total",
+          "legendFormat": "{{risk_level}}"
+        }],
+        "options": {
+          "legend": {
+            "displayMode": "table",
+            "placement": "right",
+            "values": ["value", "percent"]
+          },
+          "pieType": "donut",
+          "displayLabels": ["name", "percent"]
+        },
+        "fieldConfig": {
+          "overrides": [
+            {
+              "matcher": {"id": "byName", "options": "Low"},
+              "properties": [{"id": "color", "value": {"fixedColor": "green", "mode": "fixed"}}]
+            },
+            {
+              "matcher": {"id": "byName", "options": "Medium"},
+              "properties": [{"id": "color", "value": {"fixedColor": "yellow", "mode": "fixed"}}]
+            },
+            {
+              "matcher": {"id": "byName", "options": "High"},
+              "properties": [{"id": "color", "value": {"fixedColor": "red", "mode": "fixed"}}]
+            }
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "title": "Batch Predictions",
+        "type": "stat",
+        "gridPos": {"h": 4, "w": 6, "x": 0, "y": 20},
+        "targets": [{
+          "expr": "batch_prediction_requests_total",
+          "legendFormat": "Batch Requests"
+        }],
+        "options": {
+          "graphMode": "area",
+          "colorMode": "value"
+        }
+      },
+      {
+        "id": 11,
+        "title": "Average Batch Size",
+        "type": "stat",
+        "gridPos": {"h": 4, "w": 6, "x": 6, "y": 20},
+        "targets": [{
+          "expr": "rate(batch_prediction_size_sum[5m]) / rate(batch_prediction_size_count[5m])",
+          "legendFormat": "Avg Size"
+        }],
+        "options": {
+          "graphMode": "area",
+          "colorMode": "value"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "decimals": 1
+          }
+        }
+      },
+      {
+        "id": 12,
+        "title": "Batch Latency",
+        "type": "timeseries",
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 20},
+        "targets": [{
+          "expr": "rate(batch_prediction_latency_seconds_sum[1m]) / rate(batch_prediction_latency_seconds_count[1m])",
+          "legendFormat": "Avg Batch Latency"
+        }],
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "smooth",
+              "fillOpacity": 10
+            },
+            "unit": "s",
+            "decimals": 3
+          }
+        }
+      },
+      {
+        "id": 13,
+        "title": "Endpoint Latency Distribution",
+        "type": "timeseries",
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 24},
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.95, rate(endpoint_latency_seconds_bucket[5m]))",
+            "legendFormat": "p95 - {{endpoint}}"
+          },
+          {
+            "expr": "histogram_quantile(0.50, rate(endpoint_latency_seconds_bucket[5m]))",
+            "legendFormat": "p50 - {{endpoint}}"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "smooth"
+            },
+            "unit": "s",
+            "decimals": 3
+          }
+        }
+      },
+      {
+        "id": 14,
+        "title": "HTTP Status Codes",
+        "type": "timeseries",
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 24},
+        "targets": [{
+          "expr": "rate(http_requests_total[1m])",
+          "legendFormat": "{{status}} - {{endpoint}}"
+        }],
+        "fieldConfig": {
+          "defaults": {
+            "custom": {
+              "drawStyle": "bars",
+              "fillOpacity": 50
+            },
+            "unit": "reqps"
+          }
+        }
+      }
+    ]
+  },
+  "overwrite": true
+}

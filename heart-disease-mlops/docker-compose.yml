@@ -48,8 +48,9 @@ services:
       - GF_USERS_ALLOW_SIGN_UP=false
     volumes:
       - grafana-data:/var/lib/grafana
-      - ./deployment/grafana/dashboards:/etc/grafana/provisioning/dashboards
-      - ./deployment/grafana/datasources:/etc/grafana/provisioning/datasources
+      - ./deployment/grafana:/etc/grafana/provisioning/dashboards
+      - ./deployment/grafana/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml
+      - ./deployment/grafana/dashboard-provider.yml:/etc/grafana/provisioning/dashboards/provider.yml
     restart: unless-stopped
     depends_on:
       - prometheus
