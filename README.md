@@ -12,6 +12,18 @@
 
 📁 **Main Project Directory**: [`heart-disease-mlops/`](./heart-disease-mlops)
 
+
+## 👥 Contributors
+
+| Name | BITS ID |
+|------|---------|
+| GOBIND SAH | 2024AA05643 |
+| VISHAL SINGH | 2024AA05641 |
+| YASH VERMA | 2024AA05640 |
+| AVISHI GUPTA | 2024AA05055 |
+| ASIT SHUKLA  | 2023AC05956 |
+
+
 **For complete setup and deployment instructions**, navigate to the project folder:
 
 ```bash
@@ -371,13 +383,6 @@ Response: Prometheus metrics
 - ✅ API documentation (OpenAPI/Swagger)
 - ✅ Comprehensive documentation
 
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 👥 Contributors
-
-- Your Name - Initial work
 
 ## 🙏 Acknowledgments
 
@@ -385,9 +390,6 @@ This project is licensed under the MIT License.
 - Cleveland Clinic Foundation for data collection
 - FastAPI and MLflow communities
 
-## 📧 Contact
-
-For questions or feedback, please reach out to: your.email@example.com
 
 ---
 
