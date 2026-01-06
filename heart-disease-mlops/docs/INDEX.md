@@ -11,10 +11,10 @@ This documentation is organized according to the assignment requirements. Naviga
 
 Essential guides for setting up the project environment and running the application:
 
-- **[START_HERE.md](01_Setup_Installation/START_HERE.md)** - Quick start guide to get the project running
-- **[LOCAL_DEPLOYMENT_GUIDE.md](01_Setup_Installation/LOCAL_DEPLOYMENT_GUIDE.md)** - Complete local setup with virtual environment, dependencies, and model training
-- **[EXECUTION_GUIDE.md](01_Setup_Installation/EXECUTION_GUIDE.md)** - Step-by-step execution instructions for the entire pipeline
-- **[CLOUD_DEPLOYMENT_GUIDE.md](01_Setup_Installation/CLOUD_DEPLOYMENT_GUIDE.md)** - Azure Container Apps deployment setup and configuration
+- **[START_HERE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/START_HERE.md)** - Quick start guide to get the project running
+- **[LOCAL_DEPLOYMENT_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/LOCAL_DEPLOYMENT_GUIDE.md)** - Complete local setup with virtual environment, dependencies, and model training
+- **[EXECUTION_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/EXECUTION_GUIDE.md)** - Step-by-step execution instructions for the entire pipeline
+- **[CLOUD_DEPLOYMENT_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/CLOUD_DEPLOYMENT_GUIDE.md)** - Azure Container Apps deployment setup and configuration
 
 ---
 
@@ -23,7 +23,7 @@ Essential guides for setting up the project environment and running the applicat
 
 Exploratory data analysis and model development documentation:
 
-- **[01_EDA.ipynb](02_EDA_Modelling/01_EDA.ipynb)** - Jupyter notebook with complete exploratory data analysis, visualizations, and statistical summaries
+- **[01_EDA.ipynb](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/02_EDA_Modelling/01_EDA.ipynb)** - Jupyter notebook with complete exploratory data analysis, visualizations, and statistical summaries
 - **Model Selection:** Logistic Regression, Random Forest, Gradient Boosting
 - **Best Model:** Random Forest (88.52% accuracy, 0.95 ROC-AUC)
 - **Feature Engineering:** StandardScaler preprocessing pipeline
@@ -42,7 +42,7 @@ Exploratory data analysis and model development documentation:
 
 MLflow experiment tracking and model versioning:
 
-- **[MODEL_STORAGE_INFO.md](03_Experiment_Tracking/MODEL_STORAGE_INFO.md)** - Model storage locations, versioning strategy, and cloud upload guide
+- **[MODEL_STORAGE_INFO.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/03_Experiment_Tracking/MODEL_STORAGE_INFO.md)** - Model storage locations, versioning strategy, and cloud upload guide
 
 🔬 **Experiment Tracking Details:**
 - **MLflow Version:** 2.5.0
@@ -64,7 +64,7 @@ MLflow experiment tracking and model versioning:
 
 System architecture and component design:
 
-- **[ARCHITECTURE.md](04_Architecture/ARCHITECTURE.md)** - Comprehensive system architecture documentation with component descriptions
+- **[ARCHITECTURE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/04_Architecture/ARCHITECTURE.md)** - Comprehensive system architecture documentation with component descriptions
 
 🏗️ **Architecture Overview:**
 - **API Layer:** FastAPI with 4 endpoints (/health, /predict, /predict/batch, /metrics)
@@ -89,9 +89,9 @@ System architecture and component design:
 
 Visual documentation and deployment guides:
 
-- **[GRAFANA_SETUP_GUIDE.md](05_CI_CD_Deployment/GRAFANA_SETUP_GUIDE.md)** - Grafana dashboard setup with monitoring panels
-- **[GRAFANA_GUIDE.md](05_CI_CD_Deployment/GRAFANA_GUIDE.md)** - Dashboard usage and metric interpretation
-- **[DASHBOARD_SETUP_COMPLETE.md](05_CI_CD_Deployment/DASHBOARD_SETUP_COMPLETE.md)** - Monitoring stack configuration
+- **[GRAFANA_SETUP_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/05_CI_CD_Deployment/GRAFANA_SETUP_GUIDE.md)** - Grafana dashboard setup with monitoring panels
+- **[GRAFANA_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/05_CI_CD_Deployment/GRAFANA_GUIDE.md)** - Dashboard usage and metric interpretation
+- **[DASHBOARD_SETUP_COMPLETE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/05_CI_CD_Deployment/DASHBOARD_SETUP_COMPLETE.md)** - Monitoring stack configuration
 
 📸 **Screenshots Available in:** `../screenshots/`
 - GitHub Actions workflow runs
@@ -117,9 +117,9 @@ Visual documentation and deployment guides:
 
 Access instructions and repository navigation:
 
-- **[ACCESS_INSTRUCTIONS.md](06_Repository_Links/ACCESS_INSTRUCTIONS.md)** - How to access all deployed services and UIs
-- **[SAMPLE_DATA_GUIDE.md](06_Repository_Links/SAMPLE_DATA_GUIDE.md)** - Test data usage and API testing guide
-- **[DATASET_LOCATION_UPDATE.md](06_Repository_Links/DATASET_LOCATION_UPDATE.md)** - Dataset location and download information
+- **[ACCESS_INSTRUCTIONS.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/06_Repository_Links/ACCESS_INSTRUCTIONS.md)** - How to access all deployed services and UIs
+- **[SAMPLE_DATA_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/06_Repository_Links/SAMPLE_DATA_GUIDE.md)** - Test data usage and API testing guide
+- **[DATASET_LOCATION_UPDATE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/06_Repository_Links/DATASET_LOCATION_UPDATE.md)** - Dataset location and download information
 
 🔗 **GitHub Repository:** [MLOpsExperimentalLearning_Assignment_1_Group_81](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81)
 
@@ -153,7 +153,7 @@ Access instructions and repository navigation:
 
 ## 📄 Main Submission Report
 
-**[FINAL_SUBMISSION_REPORT.md](FINAL_SUBMISSION_REPORT.md)** - Comprehensive 10-page final report covering:
+**[FINAL_SUBMISSION_REPORT.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/FINAL_SUBMISSION_REPORT.md)** - Comprehensive 10-page final report covering:
 - Executive Summary
 - Complete MLOps methodology
 - Dataset analysis and EDA insights
@@ -198,11 +198,11 @@ Access instructions and repository navigation:
 
 ## 🚀 Getting Started
 
-1. Start with **[START_HERE.md](01_Setup_Installation/START_HERE.md)** for quick setup
-2. Follow **[LOCAL_DEPLOYMENT_GUIDE.md](01_Setup_Installation/LOCAL_DEPLOYMENT_GUIDE.md)** for complete setup
-3. Review **[01_EDA.ipynb](02_EDA_Modelling/01_EDA.ipynb)** for data insights
-4. Check **[ARCHITECTURE.md](04_Architecture/ARCHITECTURE.md)** for system design
-5. Read **[FINAL_SUBMISSION_REPORT.md](FINAL_SUBMISSION_REPORT.md)** for comprehensive overview
+1. Start with **[START_HERE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/START_HERE.md)** for quick setup
+2. Follow **[LOCAL_DEPLOYMENT_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/LOCAL_DEPLOYMENT_GUIDE.md)** for complete setup
+3. Review **[01_EDA.ipynb](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/02_EDA_Modelling/01_EDA.ipynb)** for data insights
+4. Check **[ARCHITECTURE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/04_Architecture/ARCHITECTURE.md)** for system design
+5. Read **[FINAL_SUBMISSION_REPORT.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/FINAL_SUBMISSION_REPORT.md)** for comprehensive overview
 
 ---
 

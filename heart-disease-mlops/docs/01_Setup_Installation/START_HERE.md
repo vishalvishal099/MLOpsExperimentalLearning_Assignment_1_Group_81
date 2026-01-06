@@ -10,20 +10,20 @@ This is your **complete roadmap** for deploying the Heart Disease Prediction MLO
 ### Option 1: 🏠 Run Locally 
 **Perfect for:** Testing, development, understanding the project
 
-👉 **Follow:** [`LOCAL_DEPLOYMENT_GUIDE.md`](./LOCAL_DEPLOYMENT_GUIDE.md)
+👉 **Follow:** [`LOCAL_DEPLOYMENT_GUIDE.md`](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/LOCAL_DEPLOYMENT_GUIDE.md)
     *API will be running on http://localhost:8000* 
 
 ---
 
 ### Option 2: ☁️ Deploy to Cloud 
 
-👉 **Follow:** [`CLOUD_DEPLOYMENT_GUIDE.md`](./CLOUD_DEPLOYMENT_GUIDE.md)
+👉 **Follow:** [`CLOUD_DEPLOYMENT_GUIDE.md`](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/CLOUD_DEPLOYMENT_GUIDE.md)
 
 ---
 
 ### Option 3: 🔗  Test the API?
 
-👉 **Follow:** [`ACCESS_INSTRUCTIONS.md`](./ACCESS_INSTRUCTIONS.md)
+👉 **Follow:** [`ACCESS_INSTRUCTIONS.md`](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/06_Repository_Links/ACCESS_INSTRUCTIONS.md)
 
 ---
 

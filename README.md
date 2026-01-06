@@ -10,10 +10,10 @@
 
 ## 🚀 Quick Start
 
-📁 **Main Project Directory**: [`heart-disease-mlops/`](./heart-disease-mlops)
+📁 **Main Project Directory**: [`heart-disease-mlops/`](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/tree/main/heart-disease-mlops)
 
 
-**👉 START HERE: For Local Or Cloud Deployment Guide**  [`START_HERE.md`](./heart-disease-mlops/docs/START_HERE.md) 
+**👉 START HERE: For Local Or Cloud Deployment Guide**  [`START_HERE.md`](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/START_HERE.md) 
 
 This guide will help you:
 - ✅ Understand what to do step-by-step
@@ -30,11 +30,11 @@ cd heart-disease-mlops
 ```
 
 **Key Documentation**:
-- 🎯 [**START HERE**](./heart-disease-mlops/docs/START_HERE.md) - **Begin here** ⭐
-- 🏠 [**Local Deployment Guide**](./heart-disease-mlops/docs/LOCAL_DEPLOYMENT_GUIDE.md) - Run locally step-by-step
-- ☁️ [**Cloud Deployment Guide**](./heart-disease-mlops/docs/CLOUD_DEPLOYMENT_GUIDE.md) - Deploy to Azure
-- 🔗 [**Access Instructions**](./heart-disease-mlops/docs/ACCESS_INSTRUCTIONS.md) - Test the API
-- 📋 [**Execution Guide**](./heart-disease-mlops/docs/EXECUTION_GUIDE.md) - Detailed execution steps
+- 🎯 [**START HERE**](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/START_HERE.md) - **Begin here** ⭐
+- 🏠 [**Local Deployment Guide**](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/LOCAL_DEPLOYMENT_GUIDE.md) - Run locally step-by-step
+- ☁️ [**Cloud Deployment Guide**](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/CLOUD_DEPLOYMENT_GUIDE.md) - Deploy to Azure
+- 🔗 [**Access Instructions**](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/06_Repository_Links/ACCESS_INSTRUCTIONS.md) - Test the API
+- 📋 [**Execution Guide**](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/EXECUTION_GUIDE.md) - Detailed execution steps
 
 ---
 
