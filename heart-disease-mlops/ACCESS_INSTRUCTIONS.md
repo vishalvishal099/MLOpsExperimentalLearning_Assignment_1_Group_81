@@ -67,7 +67,7 @@ Before accessing any service, ensure you have:
 
 ## 🧪 Testing the API
 
-### Method 1: Using Swagger UI (Easiest)
+### Method 1: Using Swagger UI
 
 1. Open your browser and navigate to: `http://localhost:8000/docs`
 2. Click on any endpoint (e.g., `/predict`)
@@ -220,7 +220,7 @@ curl -X POST "http://localhost:8000/predict" \
 
 ## 🐳 Starting Services
 
-### Option 1: Direct Python API (Recommended for Development)
+### Option 1: Direct Python API
 
 ```bash
 # Navigate to project directory
@@ -302,56 +302,6 @@ Use this checklist to verify all services are running correctly:
 
 ---
 
-## 🐛 Troubleshooting
-
-### Port Already in Use
-
-**Problem:** Error message "Address already in use"
-
-**Solution:**
-```bash
-# Find process using port 8000
-lsof -i :8000
-
-# Kill the process (replace PID with actual process ID)
-kill -9 <PID>
-
-# Or use different port
-uvicorn src.app:app --port 8001
-```
-
----
-
-### API Not Responding
-
-**Check if service is running:**
-```bash
-# For Docker
-docker ps
-
-# For local Python
-ps aux | grep uvicorn
-```
-
-**Restart the service:**
-```bash
-# Docker
-docker restart heart-api
-
-# Or docker-compose
-docker-compose restart api
-```
-
----
-
-### Cannot Access from Browser
-
-1. Ensure firewall is not blocking the port
-2. Try `http://127.0.0.1:8000` instead of `localhost`
-3. Check if the service is running: `curl http://localhost:8000/health`
-
----
-
 ## 📝 Feature Attributes (For Testing)
 
 When testing predictions, use these attribute ranges:
@@ -372,32 +322,3 @@ When testing predictions, use these attribute ranges:
 | `ca` | Number of major vessels | 0-3 | Integer |
 | `thal` | Thalassemia | 0-3 | Integer |
 
----
-
-## 📞 Support
-
-For issues or questions:
-1. Check `EXECUTION_GUIDE.md` for detailed setup instructions
-2. Review `README.md` for project overview
-3. Check logs: `docker logs heart-api` or `docker-compose logs`
-4. Verify all dependencies are installed: `pip list`
-
----
-
-## ✅ Assignment Submission Checklist
-
-For grading purposes, ensure evaluators can:
-
-- [ ] Access API documentation at `http://localhost:8000/docs`
-- [ ] Test `/health` endpoint successfully
-- [ ] Make prediction requests via `/predict` endpoint
-- [ ] View MLflow experiments at `http://localhost:5000` (if applicable)
-- [ ] Access monitoring stack via docker-compose (if demonstrated)
-- [ ] See prediction response with proper JSON format
-- [ ] Verify all endpoints return appropriate HTTP status codes
-
----
-
-**Last Updated:** December 30, 2025  
-**Project:** Heart Disease Prediction MLOps Pipeline  
-**Version:** 1.0.0

@@ -10,19 +10,19 @@ This document describes the complete architecture of the Heart Disease Predictio
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                         Data Pipeline                            │
+│                         Data Pipeline                           │
 ├─────────────────────────────────────────────────────────────────┤
 │  UCI Dataset → Data Download → Preprocessing → Train/Test Split │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│                      Model Training Pipeline                      │
+│                      Model Training Pipeline                    │
 ├─────────────────────────────────────────────────────────────────┤
-│  Feature Engineering → Model Training → Evaluation → Selection   │
+│  Feature Engineering → Model Training → Evaluation → Selection  │
 │  ├─ Logistic Regression                                         │
 │  ├─ Random Forest                                               │
 │  └─ Gradient Boosting                                           │
-│                                                                  │
+│                                                                 │
 │  MLflow Tracking Server                                         │
 │  ├─ Parameters                                                  │
 │  ├─ Metrics                                                     │
@@ -31,60 +31,60 @@ This document describes the complete architecture of the Heart Disease Predictio
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│                      Model Serving (API)                         │
+│                      Model Serving (API)                        │
 ├─────────────────────────────────────────────────────────────────┤
 │  FastAPI Application                                            │
-│  ├─ /predict        (POST) - Single prediction                 │
-│  ├─ /predict/batch  (POST) - Batch prediction                  │
-│  ├─ /health         (GET)  - Health check                      │
-│  └─ /metrics        (GET)  - Prometheus metrics                │
-│                                                                  │
+│  ├─ /predict        (POST) - Single prediction                  │
+│  ├─ /predict/batch  (POST) - Batch prediction                   │
+│  ├─ /health         (GET)  - Health check                       │
+│  └─ /metrics        (GET)  - Prometheus metrics                 │
+│                                                                 │
 │  Loaded Components:                                             │
-│  ├─ Trained Model (best_model.pkl)                            │
-│  └─ Preprocessor (preprocessor.pkl)                           │
+│  ├─ Trained Model (best_model.pkl)                              │
+│  └─ Preprocessor (preprocessor.pkl)                             │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│                    Deployment & Orchestration                    │
+│                    Deployment & Orchestration                   │
 ├─────────────────────────────────────────────────────────────────┤
 │  Docker Container                                               │
-│  ├─ Application Code                                           │
-│  ├─ Dependencies                                               │
-│  ├─ Models                                                     │
-│  └─ Configuration                                              │
-│                                                                  │
+│  ├─ Application Code                                            │
+│  ├─ Dependencies                                                │
+│  ├─ Models                                                      │
+│  └─ Configuration                                               │
+│                                                                 │
 │  Kubernetes Cluster                                             │
-│  ├─ Deployment (3 replicas)                                    │
-│  ├─ Service (LoadBalancer)                                     │
-│  ├─ HPA (Auto-scaling)                                         │
-│  └─ Ingress (External access)                                  │
+│  ├─ Deployment (3 replicas)                                     │
+│  ├─ Service (LoadBalancer)                                      │
+│  ├─ HPA (Auto-scaling)                                          │
+│  └─ Ingress (External access)                                   │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│                    Monitoring & Observability                    │
+│                    Monitoring & Observability                   │
 ├─────────────────────────────────────────────────────────────────┤
 │  Prometheus                                                     │
-│  ├─ Metrics Collection                                         │
-│  ├─ Time-series Database                                       │
-│  └─ Alerting Rules                                             │
-│                                                                  │
+│  ├─ Metrics Collection                                          │
+│  ├─ Time-series Database                                        │
+│  └─ Alerting Rules                                              │
+│                                                                 │
 │  Grafana                                                        │
-│  ├─ Dashboards                                                 │
-│  ├─ Visualizations                                             │
-│  └─ Alerts                                                     │
-│                                                                  │
+│  ├─ Dashboards                                                  │
+│  ├─ Visualizations                                              │
+│  └─ Alerts                                                      │
+│                                                                 │
 │  Application Logs                                               │
-│  └─ Structured logging (JSON)                                  │
+│  └─ Structured logging (JSON)                                   │
 └─────────────────────────────────────────────────────────────────┘
                               ↓
 ┌─────────────────────────────────────────────────────────────────┐
-│                      CI/CD Pipeline                              │
+│                      CI/CD Pipeline                             │
 ├─────────────────────────────────────────────────────────────────┤
 │  GitHub Actions                                                 │
-│  ├─ Lint & Test                                                │
-│  ├─ Model Training                                             │
-│  ├─ Docker Build                                               │
-│  └─ Deployment                                                 │
+│  ├─ Lint & Test                                                 │
+│  ├─ Model Training                                              │
+│  ├─ Docker Build                                                │
+│  └─ Deployment                                                  │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -406,150 +406,8 @@ This document describes the complete architecture of the Heart Disease Predictio
 - GitHub Actions: Automation
 - Git: Version control
 
-### Cloud Platforms (Optional)
-- Google Cloud Platform (GKE)
-- Amazon Web Services (EKS)
+### Cloud Platforms 
 - Microsoft Azure (AKS)
-
----
-
-## 5. Security Considerations
-
-### API Security
-- Input validation (Pydantic)
-- Rate limiting (to be added)
-- HTTPS/TLS in production
-- Authentication (to be added)
-- CORS configuration
-
-### Container Security
-- Non-root user
-- Minimal base image
-- Security scanning
-- Secrets management
-
-### Kubernetes Security
-- Network policies
-- RBAC permissions
-- Pod security policies
-- Secrets for sensitive data
-- Image pull policies
-
-### Data Security
-- Patient data anonymization
-- Encrypted data at rest
-- Secure data transmission
-- Audit logging
-- Access controls
-
----
-
-## 6. Scalability
-
-### Horizontal Scaling
-- Multiple API replicas
-- Load balancing
-- Auto-scaling (HPA)
-- Stateless design
-
-### Performance Optimization
-- Model caching
-- Batch prediction support
-- Connection pooling
-- Asynchronous operations
-
-### Resource Management
-- CPU/Memory limits
-- Request throttling
-- Efficient data structures
-- Model optimization
-
----
-
-## 7. Disaster Recovery
-
-### Backup Strategy
-- Model versioning (MLflow)
-- Git version control
-- Container registry
-- Data backups
-
-### High Availability
-- Multiple replicas
-- Health checks
-- Automatic restarts
-- Rolling updates
-
-### Monitoring & Alerting
-- Real-time monitoring
-- Alert notifications
-- Performance degradation detection
-- Anomaly detection
-
----
-
-## 8. Future Enhancements
-
-### Short-term
-- [ ] Add authentication (JWT)
-- [ ] Implement rate limiting
-- [ ] Add request caching
-- [ ] Create Helm charts
-- [ ] Set up CD to staging/prod
-
-### Medium-term
-- [ ] A/B testing framework
-- [ ] Model retraining pipeline
-- [ ] Feature store integration
-- [ ] Advanced monitoring (APM)
-- [ ] Multi-model serving
-
-### Long-term
-- [ ] Real-time predictions
-- [ ] Federated learning
-- [ ] Model explainability API
-- [ ] Mobile app integration
-- [ ] Multi-region deployment
-
----
-
-## 9. Performance Benchmarks
-
-### API Latency
-- Average response time: <100ms
-- P95: <200ms
-- P99: <500ms
-
-### Throughput
-- Single instance: ~100 req/s
-- With 3 replicas: ~300 req/s
-- With auto-scaling: up to 1000 req/s
-
-### Model Performance
-- Inference time: <10ms
-- Memory footprint: ~50MB
-- CPU usage: <5% per request
-
----
-
-## 10. Cost Estimation
-
-### Development
-- Local development: Free
-- GitHub Actions: Free (2000 min/month)
-
-### Production (Cloud)
-- Kubernetes cluster: $150-300/month
-- Load balancer: $20/month
-- Storage: $10/month
-- Monitoring: $50/month
-- **Total: ~$250-400/month**
-
-### Optimization Options
-- Use spot instances
-- Right-size resources
-- Implement auto-scaling
-- Use reserved instances
 
 ---
 

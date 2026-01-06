@@ -61,7 +61,6 @@ ls
 
 ## 🔧 Step 2: Set Up Python Virtual Environment
 
-### Why? 
 A virtual environment keeps your project dependencies isolated from your system Python.
 
 ```bash
@@ -104,7 +103,6 @@ pip install -r requirements.txt
 # - and more...
 ```
 
-**Wait time:** 2-5 minutes depending on your internet speed.
 
 **Verify installation:**
 ```bash
@@ -163,7 +161,6 @@ INFO:__main__:✓ Gradient Boosting - Accuracy: 0.87, ROC-AUC: 0.91
 INFO:__main__:✓ Best model saved to models/best_model.pkl
 ```
 
-**Time:** 1-2 minutes
 
 ---
 
@@ -263,7 +260,6 @@ curl -X POST "http://localhost:8000/predict" \
 3. You should see **Swagger UI** with interactive API documentation
 4. Try clicking on `/predict` → "Try it out" → Enter data → "Execute"
 
-**Screenshot this for your assignment submission!**
 
 ---
 
@@ -292,7 +288,6 @@ mlflow ui --port 5000
 1. Open: `http://localhost:5000`
 2. You'll see all your experiments, metrics, and model artifacts
 
-**Screenshot this for your assignment submission!**
 
 ---
 
@@ -400,154 +395,5 @@ tests/test_api.py::test_predict_endpoint PASSED
 tests/test_model.py::test_model_training PASSED
 tests/test_preprocessing.py::test_data_loading PASSED
 ...
-=================== X passed in X.XXs ===================
+======================================
 ```
-
----
-
-## 📸 Step 12: Take Screenshots for Assignment
-
-Take screenshots of:
-
-1. ✅ **Terminal showing successful API startup**
-2. ✅ **Browser showing Swagger UI** (http://localhost:8000/docs)
-3. ✅ **Successful prediction response** (in Swagger UI or terminal)
-4. ✅ **MLflow UI** showing experiments (http://localhost:5000)
-5. ✅ **Test results** (pytest output)
-6. ✅ **Docker containers running** (if using Docker)
-7. ✅ **Grafana dashboard** (if using docker-compose)
-
-Save all screenshots in the `screenshots/` folder.
-
----
-
-## 🛑 How to Stop Everything
-
-### Stop API Server
-- Press `CTRL + C` in the terminal running uvicorn
-
-### Stop MLflow
-- Press `CTRL + C` in the terminal running mlflow
-
-### Stop Docker
-```bash
-# Stop container
-docker stop heart-api
-
-# Stop docker-compose
-docker-compose down
-```
-
-### Deactivate Virtual Environment
-```bash
-deactivate
-```
-
----
-
-## 🐛 Troubleshooting
-
-### Issue 1: Port Already in Use
-```bash
-# Find process using port 8000
-lsof -i :8000
-
-# Kill the process
-kill -9 <PID>
-
-# Or use different port
-uvicorn src.app:app --port 8001
-```
-
-### Issue 2: Module Not Found Error
-```bash
-# Ensure virtual environment is activated
-source venv/bin/activate
-
-# Reinstall dependencies
-pip install -r requirements.txt
-```
-
-### Issue 3: Model Not Found
-```bash
-# Train the models first
-python src/train.py
-
-# Check if models exist
-ls -la models/
-```
-
-### Issue 4: Data Not Found
-```bash
-# Check if data exists
-ls -la raw_dataSet/heart+disease/
-
-# Run download script
-python src/download_data.py
-```
-
-### Issue 5: Permission Denied (macOS/Linux)
-```bash
-# Make scripts executable
-chmod +x setup.sh
-
-# Run with python3 explicitly
-python3 src/train.py
-```
-
----
-
-## ✅ Success Checklist
-
-Before considering your local deployment complete, verify:
-
-- [ ] Virtual environment created and activated
-- [ ] All dependencies installed successfully
-- [ ] Data downloaded and preprocessed
-- [ ] Models trained and saved in `models/` directory
-- [ ] API server starts without errors
-- [ ] Health endpoint returns "healthy" status
-- [ ] Prediction endpoint returns valid JSON response
-- [ ] Swagger UI accessible at http://localhost:8000/docs
-- [ ] MLflow UI shows experiments (if started)
-- [ ] Tests pass successfully
-- [ ] Screenshots taken for assignment submission
-
----
-
-## 📚 Quick Reference Commands
-
-```bash
-# Complete workflow in one go
-cd heart-disease-mlops
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python src/download_data.py
-python src/train.py
-uvicorn src.app:app --reload
-
-# In a new terminal: Test
-curl http://localhost:8000/health
-curl -X POST http://localhost:8000/predict -H "Content-Type: application/json" -d @sample_input.json
-
-# Open browser
-open http://localhost:8000/docs
-```
-
----
-
-## 🎓 For Assignment Submission
-
-Include in your submission:
-1. ✅ Screenshots of all working components
-2. ✅ This LOCAL_DEPLOYMENT_GUIDE.md file
-3. ✅ Logs showing successful execution
-4. ✅ Test results
-5. ✅ MLflow experiment screenshots
-
----
-
-**Need help with Cloud Deployment?** See `CLOUD_DEPLOYMENT_GUIDE.md`
-
-**Last Updated:** December 30, 2025
