@@ -27,17 +27,18 @@
 - **📊 Processed Data:** [data/processed/](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/tree/main/heart-disease-mlops/data/processed)
 - **🧪 Test Suite:** [tests/](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/tree/main/heart-disease-mlops/tests) - test_api.py, test_model.py, test_preprocessing.py
 - **📄 Documentation Files:**
-  - [START_HERE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/START_HERE.md)
-  - [LOCAL_DEPLOYMENT_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/LOCAL_DEPLOYMENT_GUIDE.md)
-  - [CLOUD_DEPLOYMENT_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/CLOUD_DEPLOYMENT_GUIDE.md)
-  - [EXECUTION_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/EXECUTION_GUIDE.md)
-  - [ARCHITECTURE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/ARCHITECTURE.md)
-  - [GRAFANA_SETUP_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/GRAFANA_SETUP_GUIDE.md)
-  - [GRAFANA_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/GRAFANA_GUIDE.md)
-  - [ACCESS_INSTRUCTIONS.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/ACCESS_INSTRUCTIONS.md)
-  - [MODEL_STORAGE_INFO.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/MODEL_STORAGE_INFO.md)
-  - [SAMPLE_DATA_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/SAMPLE_DATA_GUIDE.md)
-  - [DASHBOARD_SETUP_COMPLETE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/DASHBOARD_SETUP_COMPLETE.md)
+  - [START_HERE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/START_HERE.md)
+  - [LOCAL_DEPLOYMENT_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/LOCAL_DEPLOYMENT_GUIDE.md)
+  - [CLOUD_DEPLOYMENT_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/CLOUD_DEPLOYMENT_GUIDE.md)
+  - [EXECUTION_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/EXECUTION_GUIDE.md)
+  - [ARCHITECTURE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/04_Architecture/ARCHITECTURE.md)
+  - [GRAFANA_SETUP_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/05_CI_CD_Deployment/GRAFANA_SETUP_GUIDE.md)
+  - [GRAFANA_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/05_CI_CD_Deployment/GRAFANA_GUIDE.md)
+  - [ACCESS_INSTRUCTIONS.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/06_Repository_Links/ACCESS_INSTRUCTIONS.md)
+  - [MODEL_STORAGE_INFO.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/03_Experiment_Tracking/MODEL_STORAGE_INFO.md)
+  - [SAMPLE_DATA_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/06_Repository_Links/SAMPLE_DATA_GUIDE.md)
+  - [DASHBOARD_SETUP_COMPLETE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/05_CI_CD_Deployment/DASHBOARD_SETUP_COMPLETE.md)
+  - [DATASET_LOCATION_UPDATE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/06_Repository_Links/DATASET_LOCATION_UPDATE.md)
 
 ---
 
@@ -145,7 +146,7 @@ Three classification algorithms were selected: **(1) Logistic Regression** - Int
 ### 5.3 Model Registry
 Models registered with unique run IDs, version tracking (v1.0, v1.1), production/staging tags, and complete lineage tracking. Benefits include complete experiment reproducibility, easy version rollback, team collaboration support, and compliance audit trails.
 
-**📄 MLflow Setup Guide:** See `docs/EXECUTION_GUIDE.md` ([View on GitHub](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/EXECUTION_GUIDE.md))
+**📄 MLflow Setup Guide:** See `docs/01_Setup_Installation/EXECUTION_GUIDE.md` ([View on GitHub](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/EXECUTION_GUIDE.md))
 
 ---
 
@@ -201,7 +202,7 @@ Deployed on Azure Container Apps with auto-scaling (1-3 replicas based on HTTP l
 Kubernetes deployment tested locally using Minikube for validation before cloud deployment. Ensures configuration correctness and resource allocation verification.
 
 **📄 Kubernetes Manifests:** See `deployment/kubernetes/` ([View on GitHub](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/tree/main/heart-disease-mlops/deployment/kubernetes))  
-**📄 Cloud Deployment Guide:** See `docs/CLOUD_DEPLOYMENT_GUIDE.md` ([View on GitHub](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/CLOUD_DEPLOYMENT_GUIDE.md))
+**📄 Cloud Deployment Guide:** See `docs/01_Setup_Installation/CLOUD_DEPLOYMENT_GUIDE.md` ([View on GitHub](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/CLOUD_DEPLOYMENT_GUIDE.md))
 
 ---
 
@@ -219,7 +220,7 @@ Python logging module configured with INFO level for request tracking and predic
 **Enhanced Monitoring Dashboard** with 10 panels: API Health Status (real-time indicator), Total Predictions (cumulative count), Prediction Rate (requests/sec), Average Prediction Time (latency trends), Predictions by Class (distribution pie chart), HTTP Requests by Method (GET/POST breakdown), CPU Usage gauge, Memory Usage gauge, Batch Processing Metrics, and Error Rate over time. Auto-refresh every 10 seconds with customizable time ranges.
 
 **📄 Monitoring Configuration:** See `deployment/prometheus/` and `deployment/grafana/` ([View on GitHub](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/tree/main/heart-disease-mlops/deployment))  
-**📄 Grafana Setup Guide:** See `docs/GRAFANA_SETUP_GUIDE.md` ([View on GitHub](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/GRAFANA_SETUP_GUIDE.md))
+**📄 Grafana Setup Guide:** See `docs/05_CI_CD_Deployment/GRAFANA_SETUP_GUIDE.md` ([View on GitHub](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/05_CI_CD_Deployment/GRAFANA_SETUP_GUIDE.md))
 
 ---
 
@@ -307,12 +308,12 @@ All detailed guides, configurations, and implementation code available at:
 **Repository:** https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81
 
 **Key Documentation Files:**
-- **Getting Started:** [docs/START_HERE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/START_HERE.md)
-- **Local Setup:** [docs/LOCAL_DEPLOYMENT_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/LOCAL_DEPLOYMENT_GUIDE.md)
-- **Cloud Deployment:** [docs/CLOUD_DEPLOYMENT_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/CLOUD_DEPLOYMENT_GUIDE.md)
-- **Execution Guide:** [docs/EXECUTION_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/EXECUTION_GUIDE.md)
-- **Grafana Setup:** [docs/GRAFANA_SETUP_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/GRAFANA_SETUP_GUIDE.md)
-- **Project Architecture:** [docs/ARCHITECTURE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/ARCHITECTURE.md)
+- **Getting Started:** [docs/01_Setup_Installation/START_HERE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/START_HERE.md)
+- **Local Setup:** [docs/01_Setup_Installation/LOCAL_DEPLOYMENT_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/LOCAL_DEPLOYMENT_GUIDE.md)
+- **Cloud Deployment:** [docs/01_Setup_Installation/CLOUD_DEPLOYMENT_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/CLOUD_DEPLOYMENT_GUIDE.md)
+- **Execution Guide:** [docs/01_Setup_Installation/EXECUTION_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/EXECUTION_GUIDE.md)
+- **Grafana Setup:** [docs/05_CI_CD_Deployment/GRAFANA_SETUP_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/05_CI_CD_Deployment/GRAFANA_SETUP_GUIDE.md)
+- **Project Architecture:** [docs/04_Architecture/ARCHITECTURE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/04_Architecture/ARCHITECTURE.md)
 
 **Implementation Code:**
 - **Training Pipeline:** [src/train.py](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/src/train.py)
@@ -346,10 +347,10 @@ All detailed guides, configurations, and implementation code available at:
 Where: TP=True Positives, TN=True Negatives, FP=False Positives, FN=False Negatives
 
 ### Appendix C: Quick Start Commands
-**Local Setup:** See [LOCAL_DEPLOYMENT_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/LOCAL_DEPLOYMENT_GUIDE.md)  
-**Training:** See [EXECUTION_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/EXECUTION_GUIDE.md)  
+**Local Setup:** See [LOCAL_DEPLOYMENT_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/LOCAL_DEPLOYMENT_GUIDE.md)  
+**Training:** See [EXECUTION_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/EXECUTION_GUIDE.md)  
 **API Testing:** See [sample_input.json](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/sample_input.json)  
-**Cloud Deployment:** See [CLOUD_DEPLOYMENT_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/CLOUD_DEPLOYMENT_GUIDE.md)
+**Cloud Deployment:** See [CLOUD_DEPLOYMENT_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/01_Setup_Installation/CLOUD_DEPLOYMENT_GUIDE.md)
 
 
 ### Appendix D: Project Metrics Summary
