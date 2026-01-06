@@ -12,15 +12,14 @@
 
 📁 **Main Project Directory**: [`heart-disease-mlops/`](./heart-disease-mlops)
 
-### 🎯 New to MLOps or Cloud Deployment?
 
-**👉 START HERE:** [`START_HERE.md`](./heart-disease-mlops/START_HERE.md) - Complete beginner-friendly guide!
+**👉 START HERE: For Local Or Cloud Deployment Guide**  [`START_HERE.md`](./heart-disease-mlops/START_HERE.md) 
 
 This guide will help you:
 - ✅ Understand what to do step-by-step
 - ✅ Choose between local vs cloud deployment
 - ✅ Navigate all available documentation
-- ✅ Complete your assignment successfully
+
 
 ---
 
@@ -31,7 +30,7 @@ cd heart-disease-mlops
 ```
 
 **Key Documentation**:
-- 🎯 [**START HERE**](./heart-disease-mlops/START_HERE.md) - **Begin here if you're new!** ⭐
+- 🎯 [**START HERE**](./heart-disease-mlops/START_HERE.md) - **Begin here** ⭐
 - 🏠 [**Local Deployment Guide**](./heart-disease-mlops/LOCAL_DEPLOYMENT_GUIDE.md) - Run locally step-by-step
 - ☁️ [**Cloud Deployment Guide**](./heart-disease-mlops/CLOUD_DEPLOYMENT_GUIDE.md) - Deploy to Azure/AWS/GCP
 - 🔗 [**Access Instructions**](./heart-disease-mlops/ACCESS_INSTRUCTIONS.md) - Test the API
@@ -404,6 +403,7 @@ Response: Prometheus metrics
 - FastAPI and MLflow communities
 
 
----
 
-**Note**: This project is part of an MLOps assignment demonstrating end-to-end ML deployment practices.
+
+
+tthe sdfasfa aod fasdlf 
