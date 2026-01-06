@@ -4,11 +4,40 @@
 ---
 
 **Course:** MLOps - Experimental Learning (S1-25_AIMLCZG523)  
-**Project:** End-to-End ML Model Development, CI/CD, and Production Deployment  
-**Team Members:** GOBIND SAH (2024AA05643), VISHAL SINGH (2024AA05641), YASH VERMA (2024AA05640), AVISHI GUPTA (2024AA05055), ASIT SHUKLA (2023AC05956)
+**Project:** End-to-End ML Model Development, CI/CD, and Production Deployment
+
+**Team Members:**
+
+| Name | Student ID |
+|------|------------|
+| GOBIND SAH | 2024AA05643 |
+| VISHAL SINGH | 2024AA05641 |
+| YASH VERMA | 2024AA05640 |
+| AVISHI GUPTA | 2024AA05055 |
+| ASIT SHUKLA | 2023AC05956 |
 
 **Date:** January 6, 2026  
 **GitHub Repository:** [MLOpsExperimentalLearning_Assignment_1_Group_81](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81)
+
+**Project Resources:**
+- **📖 README:** [README.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/README.md)
+- **📸 Screenshots:** [screenshots/](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/tree/main/heart-disease-mlops/screenshots)
+- **🎥 Project Demo Video:** [recorded_video_project_pipeline/](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/tree/main/heart-disease-mlops/recorded_video_project_pipeline)
+- **🤖 Trained Models:** [models/](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/tree/main/heart-disease-mlops/models) - best_model.pkl, preprocessor.pkl
+- **📊 Processed Data:** [data/processed/](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/tree/main/heart-disease-mlops/data/processed)
+- **🧪 Test Suite:** [tests/](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/tree/main/heart-disease-mlops/tests) - test_api.py, test_model.py, test_preprocessing.py
+- **📄 Documentation Files:**
+  - [START_HERE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/START_HERE.md)
+  - [LOCAL_DEPLOYMENT_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/LOCAL_DEPLOYMENT_GUIDE.md)
+  - [CLOUD_DEPLOYMENT_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/CLOUD_DEPLOYMENT_GUIDE.md)
+  - [EXECUTION_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/EXECUTION_GUIDE.md)
+  - [ARCHITECTURE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/ARCHITECTURE.md)
+  - [GRAFANA_SETUP_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/GRAFANA_SETUP_GUIDE.md)
+  - [GRAFANA_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/GRAFANA_GUIDE.md)
+  - [ACCESS_INSTRUCTIONS.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/ACCESS_INSTRUCTIONS.md)
+  - [MODEL_STORAGE_INFO.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/MODEL_STORAGE_INFO.md)
+  - [SAMPLE_DATA_GUIDE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/SAMPLE_DATA_GUIDE.md)
+  - [DASHBOARD_SETUP_COMPLETE.md](https://github.com/vishalvishal099/MLOpsExperimentalLearning_Assignment_1_Group_81/blob/main/heart-disease-mlops/docs/DASHBOARD_SETUP_COMPLETE.md)
 
 ---
 
@@ -330,17 +359,6 @@ Where: TP=True Positives, TN=True Negatives, FP=False Positives, FN=False Negati
 **Infrastructure:** 3 replicas, 1Gi memory limit, 500m CPU limit, 99.9% uptime  
 **Testing:** 30+ tests, 85%+ coverage, automated CI/CD in 8 minutes  
 **Monitoring:** 15+ metrics, 10 Grafana panels, 10s scrape interval
-
----
-
-## Document Information
-
-**Document Version:** 1.0 (Condensed for 10-page PDF)  
-**Last Updated:** January 6, 2026  
-**Target Length:** 10 pages
-**Prepared For:** MLOps Course Final Submission  
-**Status:** Done
-**Full Details:** See GitHub repository and linked documentation
 
 ---
 
