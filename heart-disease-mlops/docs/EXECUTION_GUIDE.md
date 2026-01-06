@@ -12,7 +12,7 @@
 | **4. Model Packaging** | ✅ Saved models<br>✅ requirements.txt<br>✅ Preprocessing pipeline | `models/best_model.pkl`<br>`models/preprocessor.pkl`<br>`requirements.txt` |
 | **5. CI/CD Pipeline** | ✅ Unit tests<br>✅ GitHub Actions<br>✅ Linting/testing<br>✅ Artifacts/logging | `tests/` folder<br>`.github/workflows/ci-cd.yml` |
 | **6. Containerization** | ✅ Docker container<br>✅ FastAPI with /predict<br>✅ JSON input/output | `Dockerfile`<br>`src/app.py`<br>`sample_input.json` |
-| **7. Production Deployment** | ✅ K8s manifests<br>✅ Load Balancer/Ingress<br>✅ Deployment instructions | `deployment/kubernetes/`<br>`docs/deployment_guide.md` |
+| **7. Production Deployment** | ✅ K8s manifests<br>✅ Load Balancer/Ingress<br>✅ Deployment instructions | `deployment/kubernetes/`<br>`CLOUD_DEPLOYMENT_GUIDE.md` |
 | **8. Monitoring & Logging** | ✅ API logging<br>✅ Prometheus + Grafana | `src/app.py` (logging)<br>`deployment/kubernetes/monitoring.yaml`<br>`docker-compose.yml` |
 | **9. Documentation** | ✅ Setup instructions<br>✅ Architecture diagram<br>✅ Screenshots folder | `README.md`<br>`docs/`<br>`screenshots/` |
 
@@ -274,7 +274,7 @@ minikube service heart-disease-api
 
 #### Option B: Cloud Deployment (GKE/EKS/AKS)
 
-See detailed instructions in `docs/deployment_guide.md`
+See detailed instructions in `CLOUD_DEPLOYMENT_GUIDE.md`
 
 ---
 

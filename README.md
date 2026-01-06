@@ -13,7 +13,7 @@
 📁 **Main Project Directory**: [`heart-disease-mlops/`](./heart-disease-mlops)
 
 
-**👉 START HERE: For Local Or Cloud Deployment Guide**  [`START_HERE.md`](./heart-disease-mlops/START_HERE.md) 
+**👉 START HERE: For Local Or Cloud Deployment Guide**  [`START_HERE.md`](./heart-disease-mlops/docs/START_HERE.md) 
 
 This guide will help you:
 - ✅ Understand what to do step-by-step
@@ -30,11 +30,11 @@ cd heart-disease-mlops
 ```
 
 **Key Documentation**:
-- 🎯 [**START HERE**](./heart-disease-mlops/START_HERE.md) - **Begin here** ⭐
-- 🏠 [**Local Deployment Guide**](./heart-disease-mlops/LOCAL_DEPLOYMENT_GUIDE.md) - Run locally step-by-step
-- ☁️ [**Cloud Deployment Guide**](./heart-disease-mlops/CLOUD_DEPLOYMENT_GUIDE.md) - Deploy to Azure/AWS/GCP
-- 🔗 [**Access Instructions**](./heart-disease-mlops/ACCESS_INSTRUCTIONS.md) - Test the API
-- 📋 [**Execution Guide**](./heart-disease-mlops/EXECUTION_GUIDE.md) - Detailed execution steps
+- 🎯 [**START HERE**](./heart-disease-mlops/docs/START_HERE.md) - **Begin here** ⭐
+- 🏠 [**Local Deployment Guide**](./heart-disease-mlops/docs/LOCAL_DEPLOYMENT_GUIDE.md) - Run locally step-by-step
+- ☁️ [**Cloud Deployment Guide**](./heart-disease-mlops/docs/CLOUD_DEPLOYMENT_GUIDE.md) - Deploy to Azure
+- 🔗 [**Access Instructions**](./heart-disease-mlops/docs/ACCESS_INSTRUCTIONS.md) - Test the API
+- 📋 [**Execution Guide**](./heart-disease-mlops/docs/EXECUTION_GUIDE.md) - Detailed execution steps
 
 ---
 
